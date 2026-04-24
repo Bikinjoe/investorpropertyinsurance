@@ -46,7 +46,8 @@ export default function Footer() {
               <li><Link href="/how-much-does-real-estate-investor-insurance-cost" className="text-white/85 hover:text-gold">Cost</Link></li>
               <li><Link href="/real-estate-investor-insurance-calculator" className="text-white/85 hover:text-gold">Cost Calculator</Link></li>
               <li><Link href="/real-estate-investor-insurance-problems" className="text-white/85 hover:text-gold">Problems We Fix</Link></li>
-              <li><Link href="/landlord-insurance-vs-investor-insurance" className="text-white/85 hover:text-gold">Compare</Link></li>
+              <li><Link href="/landlord-insurance-vs-investor-insurance" className="text-white/85 hover:text-gold">Compare Form Types</Link></li>
+              <li><Link href="/real-estate-investor-insurance-companies" className="text-white/85 hover:text-gold">Compare Agencies</Link></li>
               <li><Link href="/best-insurance-for-real-estate-investors" className="text-white/85 hover:text-gold">Best Insurance</Link></li>
               <li><Link href="/real-estate-investor-insurance-reviews" className="text-white/85 hover:text-gold">Reviews</Link></li>
               <li><Link href="/faq" className="text-white/85 hover:text-gold">FAQ</Link></li>

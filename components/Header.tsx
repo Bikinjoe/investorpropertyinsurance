@@ -26,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-surface-2/95 backdrop-blur supports-[backdrop-filter]:bg-surface-2/80">
+    <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="container-narrow flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 font-bold text-foreground">
           <span className="grid h-9 w-9 place-items-center rounded-md bg-flame text-white">
@@ -59,7 +59,7 @@ export default function Header() {
                 {dropdown === item.label && (
                   <div
                     role="menu"
-                    className="absolute left-0 top-full mt-2 w-64 overflow-hidden rounded-md border border-border bg-surface-2 shadow-lg"
+                    className="absolute left-0 top-full mt-2 w-72 overflow-hidden rounded-md border border-border bg-white shadow-lg"
                   >
                     {item.children.map((c) => (
                       <Link
@@ -97,7 +97,7 @@ export default function Header() {
         </div>
 
         <button
-          className="rounded-md border border-border px-3 py-2 text-sm font-semibold lg:hidden"
+          className="rounded-md border border-border px-3 py-2 text-sm font-semibold text-foreground lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           aria-expanded={open}
@@ -107,7 +107,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-surface-2 lg:hidden">
+        <div className="border-t border-border bg-white lg:hidden">
           <div className="container-narrow flex flex-col gap-1 py-3">
             {site.nav.map((item) =>
               isNavGroup(item) ? (

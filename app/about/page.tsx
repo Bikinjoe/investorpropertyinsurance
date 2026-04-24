@@ -26,23 +26,20 @@ export default function AboutPage() {
           Who You're Working With
         </h2>
         <div className="mt-6 grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
-          <div className="rounded-lg border border-border bg-surface-2 p-3">
+          <div className="overflow-hidden rounded-lg border border-border bg-surface-2 p-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/team/richard-sweet.jpg"
+              src="/images/richard-sweet.jpg"
               alt="Richard Sweet, Real Estate Investor Insurance Specialist"
               width={400}
               height={500}
               loading="lazy"
-              className="aspect-[4/5] w-full rounded-md bg-surface object-cover"
+              className="aspect-[4/5] w-full rounded-md object-cover"
             />
-            <p className="mt-3 text-center text-xs uppercase tracking-wider text-muted">
-              Photo placeholder
-            </p>
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-flame">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
               Owner, Vantage Point Risk Partners
             </p>
             <h3 className="mt-1 text-2xl font-bold text-foreground sm:text-3xl">
@@ -54,10 +51,17 @@ export default function AboutPage() {
             <div className="mt-5 space-y-3 text-base text-muted sm:text-lg">
               <p>
                 Independent agent specializing in real estate investor
-                insurance across the western US. Works with 10+ carrier
+                insurance: rentals, rehabs, short-term rentals, multifamily,
+                commercial property, and the specialty asset classes most
+                generalist agents will not touch. Works with 10+ carrier
                 markets that actively write investor business: BHHC,
                 Hartford, Openly, Liberty Mutual, Safeco, Travelers, Obie,
                 Steadily, REInsurePro, plus E&S markets.
+              </p>
+              <p>
+                Focused on getting investor portfolios placed correctly,
+                priced fairly, and re-shopped at every renewal. Most
+                quotes turn around the same business day.
               </p>
               <p>
                 Direct line: <a href={site.phoneHref} className="font-semibold text-flame hover:underline">{site.phone}</a>.

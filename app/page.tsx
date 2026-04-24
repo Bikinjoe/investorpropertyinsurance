@@ -88,6 +88,11 @@ const assetCards = [
     desc: "Airbnb, VRBO, and vacation properties with host liability.",
   },
   {
+    href: "/house-hacking-insurance",
+    title: "House Hacking",
+    desc: "Owner-occupied rentals: duplex, triplex, ADU, rented rooms.",
+  },
+  {
     href: "/ground-up-construction",
     title: "Ground-Up Construction",
     desc: "Builders risk for new builds and major renovations.",
@@ -98,14 +103,29 @@ const assetCards = [
     desc: "Apartments, student housing, and hotels.",
   },
   {
+    href: "/mobile-home-park-insurance",
+    title: "Mobile Home Park",
+    desc: "Specialty asset class. We work with the carriers that say yes.",
+  },
+  {
     href: "/commercial-property",
     title: "Commercial Property",
     desc: "Office, retail, warehouse, industrial, and mixed-use.",
   },
   {
-    href: "/contact",
-    title: "Not sure?",
-    desc: "We'll figure it out together. Call or text.",
+    href: "/self-storage-insurance",
+    title: "Self-Storage Facility",
+    desc: "Tenant property liability, garage keeper's, business income.",
+  },
+  {
+    href: "/portfolio-landlord-insurance",
+    title: "Portfolio Landlord",
+    desc: "5+ properties on one policy with one renewal date.",
+  },
+  {
+    href: "/dscr-loan-insurance",
+    title: "DSCR Loan Coverage",
+    desc: "Lender-compliant policies for investment-property loans.",
   },
 ];
 
@@ -125,17 +145,17 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-bg via-surface to-surface-2 text-white">
+      <section className="relative border-b border-border bg-gradient-to-br from-white via-surface to-surface-2">
         <div className="container-narrow py-16 sm:py-24">
-          <p className="text-sm font-semibold uppercase tracking-wider text-flame">
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold">
             {site.tagline}
           </p>
-          <h1 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+          <h1 className="mt-3 text-4xl font-extrabold leading-tight text-foreground sm:text-5xl md:text-6xl">
             Real Estate Investor Insurance.
             <br />
             <span className="text-flame">Built for Investors, Not Homeowners.</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-foreground sm:text-xl">
+          <p className="mt-5 max-w-2xl text-lg text-muted sm:text-xl">
             We insure every asset class: rentals, rehabs, short-term rentals,
             apartments, and commercial property. {site.carrierCount} carrier
             markets. Western US specialists.
@@ -144,7 +164,7 @@ export default function HomePage() {
             <Link href="/get-a-quote" className="btn-primary w-full text-lg sm:w-auto">
               Get a Quote
             </Link>
-            <a href={site.phoneHref} className="btn-secondary w-full bg-surface-2 text-lg sm:w-auto">
+            <a href={site.phoneHref} className="btn-secondary w-full text-lg sm:w-auto">
               {site.phoneCTA}
             </a>
           </div>
@@ -243,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* 3-step plan */}
-      <section className="bg-bg text-white">
+      <section className="bg-flame text-white">
         <div className="container-narrow py-16">
           <h2 className="text-3xl font-bold sm:text-4xl">
             Get covered in 3 steps.
@@ -266,17 +286,20 @@ export default function HomePage() {
                 body: "We handle the paperwork. You get back to investing.",
               },
             ].map((s) => (
-              <div key={s.n} className="rounded-lg border border-border bg-surface p-6">
-                <div className="grid h-12 w-12 place-items-center rounded-full bg-flame text-xl font-black">
+              <div key={s.n} className="rounded-lg border border-white/15 bg-white/5 p-6">
+                <div className="grid h-12 w-12 place-items-center rounded-full bg-gold text-xl font-black text-foreground">
                   {s.n}
                 </div>
-                <h3 className="mt-4 text-xl font-bold">{s.title}</h3>
-                <p className="mt-2 text-base text-muted">{s.body}</p>
+                <h3 className="mt-4 text-xl font-bold text-white">{s.title}</h3>
+                <p className="mt-2 text-base text-white/85">{s.body}</p>
               </div>
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link href="/get-a-quote" className="btn-primary text-lg">
+            <Link
+              href="/get-a-quote"
+              className="inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-lg font-semibold text-foreground shadow-sm transition hover:bg-white"
+            >
               Start My Quote
             </Link>
           </div>

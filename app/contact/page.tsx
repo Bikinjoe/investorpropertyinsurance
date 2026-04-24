@@ -172,12 +172,15 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="mt-6 rounded-lg border border-border bg-bg p-5 text-foreground">
+            <div className="mt-6 rounded-lg border border-flame bg-flame p-5 text-white">
               <h3 className="text-lg font-bold text-white">Need a quote?</h3>
-              <p className="mt-2 text-sm text-muted">
+              <p className="mt-2 text-sm text-white/85">
                 Skip the form. Get straight to a quote.
               </p>
-              <Link href="/get-a-quote" className="btn-primary mt-4 inline-flex">
+              <Link
+                href="/get-a-quote"
+                className="mt-4 inline-flex items-center justify-center rounded-md bg-gold px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-white"
+              >
                 Start my quote →
               </Link>
             </div>

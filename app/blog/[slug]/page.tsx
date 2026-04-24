@@ -43,6 +43,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           },
         }}
       />
+      {post.faqs && post.faqs.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }}
+        />
+      )}
       <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.title }]} />
 
       <article className="container-narrow pt-6 pb-2">
@@ -50,7 +63,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           {post.tags.map((t) => (
             <span
               key={t}
-              className="rounded-full bg-surface px-2 py-1 text-xs font-semibold uppercase tracking-wider text-foreground"
+              className="rounded-full bg-surface-2 px-2 py-1 text-xs font-semibold uppercase tracking-wider text-flame"
             >
               {t}
             </span>

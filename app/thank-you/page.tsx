@@ -29,20 +29,20 @@ const steps = [
 export default function ThankYouPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-bg to-surface text-white">
+      <section className="border-b border-border bg-gradient-to-b from-surface to-surface-2">
         <div className="container-narrow py-14 sm:py-20">
-          <p className="text-sm font-semibold uppercase tracking-wider text-flame">
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold">
             Got it
           </p>
-          <h1 className="mt-2 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
+          <h1 className="mt-2 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl md:text-5xl">
             We got your info. You're in good hands.
           </h1>
-          <p className="mt-4 max-w-3xl text-base text-foreground sm:text-lg">
+          <p className="mt-4 max-w-3xl text-base text-muted sm:text-lg">
             Thanks for reaching out. We'll review your property details and
             get back to you shortly. Usually within one business day, often
             faster.
           </p>
-          <p className="mt-3 max-w-3xl text-base text-foreground sm:text-lg">
+          <p className="mt-3 max-w-3xl text-base text-muted sm:text-lg">
             Here's what happens next:
           </p>
         </div>

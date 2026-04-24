@@ -9,14 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#111111",
-        surface: "#1E1E1E",
-        "surface-2": "#252525",
-        foreground: "#F5F5F5",
-        muted: "#A0A0A0",
-        flame: "#F97316",
-        flameDark: "#EA6B0E",
-        border: "#333333",
+        // White + deep forest green + gold palette
+        bg: "#FFFFFF",
+        surface: "#F7F8F5",
+        "surface-2": "#F0F4EE",
+        foreground: "#1A2B1A",
+        muted: "#4A5E4A",
+        // Primary brand accent (deep forest green)
+        flame: "#1B4332",
+        // Gold accent (used for hover, highlights, secondary accent)
+        flameDark: "#C9952A",
+        gold: "#C9952A",
+        border: "#D4E0D0",
       },
       fontFamily: {
         sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],

@@ -4,6 +4,8 @@ import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
+export type BlogFAQ = { q: string; a: string };
+
 export type BlogMeta = {
   slug: string;
   title: string;
@@ -14,6 +16,7 @@ export type BlogMeta = {
 
 export type BlogPost = BlogMeta & {
   content: string;
+  faqs?: BlogFAQ[];
 };
 
 function readDir() {
@@ -53,6 +56,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     date: (data.date as string) || "",
     excerpt: (data.excerpt as string) || "",
     tags: (data.tags as string[]) || [],
+    faqs: Array.isArray(data.faqs) ? (data.faqs as BlogFAQ[]) : undefined,
     content,
   };
 }

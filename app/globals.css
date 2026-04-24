@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --color-bg: #111111;
-  --color-surface: #1E1E1E;
-  --color-surface-2: #252525;
-  --color-foreground: #F5F5F5;
-  --color-muted: #A0A0A0;
-  --color-flame: #F97316;
-  --color-flame-dark: #EA6B0E;
-  --color-border: #333333;
+  color-scheme: light;
+  --color-bg: #FFFFFF;
+  --color-surface: #F7F8F5;
+  --color-surface-2: #F0F4EE;
+  --color-foreground: #1A2B1A;
+  --color-muted: #4A5E4A;
+  --color-flame: #1B4332;
+  --color-gold: #C9952A;
+  --color-border: #D4E0D0;
 }
 
 html {
@@ -33,13 +33,16 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md bg-flame px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-flameDark focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2 focus:ring-offset-bg;
+    @apply inline-flex items-center justify-center rounded-md bg-flame px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-gold focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2 focus:ring-offset-bg;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md border border-border bg-surface px-5 py-3 text-base font-semibold text-foreground transition hover:bg-surface-2 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2 focus:ring-offset-bg;
+    @apply inline-flex items-center justify-center rounded-md border border-flame bg-white px-5 py-3 text-base font-semibold text-flame transition hover:bg-flame hover:text-white focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2 focus:ring-offset-bg;
   }
   .btn-ghost {
     @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-base font-semibold text-foreground transition hover:bg-surface hover:text-flame;
+  }
+  .btn-on-dark {
+    @apply inline-flex items-center justify-center rounded-md border border-white/40 bg-transparent px-5 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-flame focus:outline-none focus:ring-2 focus:ring-white;
   }
   .container-narrow {
     @apply mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8;
@@ -80,6 +83,6 @@ body {
   }
 
   #sembley-intake-form iframe {
-    @apply w-full rounded-md bg-surface-2;
+    @apply w-full rounded-md bg-white;
   }
 }

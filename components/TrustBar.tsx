@@ -1,7 +1,7 @@
 import { site } from "@/lib/site";
 
 const items = [
-  "10+ Carrier Markets",
+  "20+ Carrier Markets",
   "Every Asset Class",
   "12-State Western US",
   "Independent Agency",

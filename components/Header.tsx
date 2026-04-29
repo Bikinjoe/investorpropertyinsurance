@@ -31,9 +31,9 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/vpr-logo.png"
+            src="/images/vpr-logo.svg"
             alt="Vantage Point Risk Partners"
-            style={{ height: "52px", width: "auto", maxWidth: "200px", objectFit: "contain" }}
+            style={{ width: "160px", height: "auto" }}
           />
         </Link>
 

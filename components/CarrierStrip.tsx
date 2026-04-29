@@ -9,8 +9,7 @@ export default function CarrierStrip() {
         Our carrier markets
       </p>
       <p className="mt-2 text-sm text-muted">
-        We shop across {site.carrierCount} carrier markets specifically for
-        real estate investor business.
+        We have access to {site.carrierCount} carrier markets supporting real estate investors and property owners across the Western US. A few of them:
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-4">
         {(site.carriers as Carrier[]).map((c) => {
@@ -37,7 +36,7 @@ export default function CarrierStrip() {
           );
         })}
         <span className="rounded-md border border-border bg-surface px-3 py-1.5 text-sm font-semibold text-muted">
-          + additional E&S markets
+          + more
         </span>
       </div>
     </div>

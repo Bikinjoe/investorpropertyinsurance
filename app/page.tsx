@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata = {
   title: "Real Estate Investor Insurance, Built for Investors",
   description:
-    "Insurance for every real estate asset class: rentals, rehabs, short-term rentals, multifamily, and commercial. 10+ carrier markets across the western US.",
+    "Insurance for real estate investors and income-producing property owners across the Western US. Access to 20+ carrier markets.",
 };
 
 const homeFAQs = [
@@ -171,7 +171,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-3 text-sm text-foreground sm:grid-cols-2 md:grid-cols-4">
             {[
-              "10+ carrier markets",
+              `${site.carrierCount} carrier markets`,
               "Every asset class",
               "12 western states",
               "Independent agency",

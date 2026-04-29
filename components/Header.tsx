@@ -33,7 +33,7 @@ export default function Header() {
           <img
             src="/images/vpr-logo.svg"
             alt="Vantage Point Risk Partners"
-            style={{ width: "220px", height: "auto", maxHeight: "56px", objectFit: "contain" }}
+            style={{ height: "44px", width: "auto" }}
           />
         </Link>
 

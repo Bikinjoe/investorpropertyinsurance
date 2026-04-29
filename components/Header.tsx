@@ -31,9 +31,9 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/vpr-logo.png"
+            src="/images/vpr-logo-black.png"
             alt="Vantage Point Risk Partners"
-            className="h-10 w-auto"
+            className="h-12 w-auto max-w-[180px] object-contain"
           />
         </Link>
 

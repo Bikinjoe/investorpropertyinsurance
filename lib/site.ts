@@ -56,6 +56,7 @@ export const site = {
       label: "Resources",
       children: [
         { label: "FAQ", href: "/faq" },
+        { label: "Carrier Markets", href: "/carrier-markets" },
         { label: "Problems We Fix", href: "/real-estate-investor-insurance-problems" },
         { label: "Cost Calculator", href: "/real-estate-investor-insurance-calculator" },
         { label: "Compare Form Types", href: "/landlord-insurance-vs-investor-insurance" },

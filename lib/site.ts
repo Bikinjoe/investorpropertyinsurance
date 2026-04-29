@@ -7,10 +7,10 @@ export const site = {
   phoneCTA: "541-681-8793",
   email: "richard@vantagepointrisk.com",
   emailHref: "mailto:richard@vantagepointrisk.com",
-  tagline: "Real Estate Investor Insurance. Every Asset Class. Western US.",
+  tagline: "Insurance for property owners and real estate investors. Western US.",
   serviceArea: "Serving AZ, CA, CO, ID, MT, NM, NV, OR, TX, UT, WA & WY",
   serviceStates: ["AZ", "CA", "CO", "ID", "MT", "NM", "NV", "OR", "TX", "UT", "WA", "WY"],
-  carrierCount: "12+",
+  carrierCount: "20+",
   carriers: [
     { name: "BHHC", logo: "/images/carriers/bhhc.jpg" },
     { name: "The Hartford", logo: "/images/carriers/hartford.jpg" },
@@ -27,7 +27,7 @@ export const site = {
     { name: "National General", logo: "/images/carriers/nationalgeneral.jpg" },
   ],
   description:
-    "Independent insurance agency for real estate investors. Coverage for every asset class: rentals, rehabs, short-term rentals, multifamily, and commercial property. 10+ carrier markets across the western US.",
+    "Independent insurance agency for real estate investors and income-producing property owners. Coverage for rental properties, commercial property, and professional-service firms. 20+ carrier markets across the western US.",
   parentSiteUrl: "https://www.vantagepointrisk.com",
   team: [
     { name: "Richard Sweet", title: "Owner" },

@@ -4,7 +4,7 @@ export const site = {
   url: "https://investorpropertyinsurance.com",
   phone: "541-681-8793",
   phoneHref: "tel:+15416818793",
-  phoneCTA: "Call or text 541-681-8793",
+  phoneCTA: "541-681-8793",
   email: "richard@vantagepointrisk.com",
   emailHref: "mailto:richard@vantagepointrisk.com",
   tagline: "Real Estate Investor Insurance. Every Asset Class. Western US.",
@@ -32,7 +32,7 @@ export const site = {
   ],
   nav: [
     {
-      label: "Asset Classes",
+      label: "Property Types",
       children: [
         { label: "Rentals & Rehabs", href: "/rentals-rehabs" },
         { label: "Short-Term Rentals", href: "/short-term-rentals" },

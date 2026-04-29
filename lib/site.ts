@@ -25,6 +25,7 @@ export const site = {
     { name: "USLI", logo: "/images/carriers/usli.jpg" },
     { name: "CrossCover", logo: "/images/carriers/crosscover.jpg" },
     { name: "National General", logo: "/images/carriers/nationalgeneral.jpg" },
+    { name: "Aegis", logo: "/images/carriers/aegis.jpg" },
   ],
   description:
     "Independent insurance agency for real estate investors and income-producing property owners. Coverage for rental properties, commercial property, and professional-service firms. 20+ carrier markets across the western US.",

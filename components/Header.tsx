@@ -28,16 +28,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="container-narrow flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-foreground">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-flame text-white">
-            <span className="text-lg font-black leading-none">IP</span>
-          </span>
-          <span className="hidden text-base sm:inline sm:text-lg">
-            Investor<span className="text-flame">Property</span>Insurance
-          </span>
-          <span className="text-base font-bold sm:hidden">
-            <span className="text-flame">IPI</span>
-          </span>
+        <Link href="/" className="flex items-center gap-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/vpr-logo.png"
+            alt="Vantage Point Risk Partners"
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav ref={dropdownRef} className="hidden items-center gap-1 lg:flex">

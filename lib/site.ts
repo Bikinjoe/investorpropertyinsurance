@@ -60,7 +60,7 @@ export const site = {
         { label: "Problems We Fix", href: "/real-estate-investor-insurance-problems" },
         { label: "Cost Calculator", href: "/real-estate-investor-insurance-calculator" },
         { label: "Compare Form Types", href: "/landlord-insurance-vs-investor-insurance" },
-        { label: "Compare Agencies", href: "/real-estate-investor-insurance-companies" },
+        { label: "Carriers", href: "/real-estate-investor-insurance-companies" },
         { label: "Best Insurance", href: "/best-insurance-for-real-estate-investors" },
         { label: "Reviews", href: "/real-estate-investor-insurance-reviews" },
       ],

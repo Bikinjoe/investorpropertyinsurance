@@ -28,12 +28,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="container-narrow flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/vpr-logo-black.png"
+            src="/images/vpr-logo.png"
             alt="Vantage Point Risk Partners"
-            className="h-12 w-auto max-w-[180px] object-contain"
+            style={{ height: "52px", width: "auto", maxWidth: "200px", objectFit: "contain" }}
           />
         </Link>
 

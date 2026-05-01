@@ -57,6 +57,11 @@ export const site = {
       children: [
         { label: "FAQ", href: "/faq" },
         { label: "Carrier Markets", href: "/carrier-markets" },
+        { label: "Rental Property Insurance", href: "/rental-property-insurance" },
+        { label: "Homeowners vs Landlord Insurance", href: "/homeowners-insurance-rental-property" },
+        { label: "What Landlord Insurance Covers", href: "/what-does-landlord-insurance-cover" },
+        { label: "If a Tenant Sues You", href: "/what-happens-if-tenant-sues-me" },
+        { label: "Landlord Insurance Cost", href: "/landlord-insurance-cost" },
         { label: "Problems We Fix", href: "/real-estate-investor-insurance-problems" },
         { label: "Cost Calculator", href: "/real-estate-investor-insurance-calculator" },
         { label: "Compare Form Types", href: "/landlord-insurance-vs-investor-insurance" },

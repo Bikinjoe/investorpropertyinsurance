@@ -32,6 +32,24 @@ const insuranceTools = [
     href: "/insurance-cost-estimator",
     live: true,
   },
+  {
+    title: "Rental Property Insurance Fit Check",
+    description: "Answer 5 quick questions to find out if your rental property might have a coverage gap.",
+    href: "/insurance-fit-check",
+    live: true,
+  },
+  {
+    title: "Quote-Ready Checklist",
+    description: "Check off what you have ready. Your quote moves faster when you're prepared.",
+    href: "/quote-ready-checklist",
+    live: true,
+  },
+  {
+    title: "How Much Coverage Do I Need?",
+    description: "A guided tool to estimate appropriate dwelling, liability, and rental income coverage for your property.",
+    href: "/how-much-coverage-do-i-need",
+    live: true,
+  },
 ];
 
 const comingSoon = [
@@ -46,10 +64,6 @@ const comingSoon = [
   {
     title: "Property Management Cost Calculator",
     description: "See how PM fees affect your actual returns.",
-  },
-  {
-    title: "How Much Coverage Do I Need?",
-    description: "A quick tool to estimate appropriate coverage levels for your property.",
   },
 ];
 

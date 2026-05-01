@@ -46,7 +46,7 @@ export const site = {
         { label: "Portfolio & Multiple Properties", href: "/multiple-rental-property-insurance" },
         { label: "Commercial Property", href: "/commercial-property" },
         { label: "Short-Term Rentals", href: "/short-term-rentals" },
-        { label: "Builders Risk & Renovation", href: "/rentals-rehabs" },
+        { label: "Builders Risk & Renovation", href: "/builders-risk-insurance" },
       ],
     },
     { label: "Resource Center", href: "/resources" },

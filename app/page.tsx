@@ -148,31 +148,32 @@ export default function HomePage() {
       <section className="relative border-b border-border bg-gradient-to-br from-white via-surface to-surface-2">
         <div className="container-narrow py-16 sm:py-24">
           <p className="text-sm font-semibold uppercase tracking-wider text-gold">
-            {site.tagline}
+            Western US Rental Property Specialists
           </p>
           <h1 className="mt-3 text-4xl font-extrabold leading-tight text-foreground sm:text-5xl md:text-6xl">
-            Real Estate Investor Insurance.
+            Your Homeowners Policy Won&apos;t Cover a Tenant Claim.
             <br />
-            <span className="text-flame">Built for Investors, Not Homeowners.</span>
+            <span className="text-flame">We write insurance built for rental property investors.</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted sm:text-xl">
-            We insure every asset class: rentals, rehabs, short-term rentals,
-            apartments, and commercial property. {site.carrierCount} carrier
-            markets. Western US specialists.
+            If you own rental property, the coverage type matters. Homeowners policies are built for owner-occupants. The moment you have a tenant, the risk profile changes and so do the exclusions. We work exclusively with real estate investors and income-producing property owners across the Western US.
+          </p>
+          <p className="mt-3 max-w-2xl text-base text-muted">
+            We know the difference between a DP-3 and a homeowners policy. More importantly, we know which one your situation actually needs.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/get-a-quote" className="btn-primary w-full text-lg sm:w-auto">
               Get a Quote
             </Link>
-            <a href={site.phoneHref} className="btn-secondary w-full text-lg sm:w-auto">
-              {site.phoneCTA}
-            </a>
+            <Link href="/insurance-fit-check" className="btn-secondary w-full text-lg sm:w-auto">
+              Check if you&apos;re covered correctly →
+            </Link>
           </div>
 
           <div className="mt-10 grid gap-3 text-sm text-foreground sm:grid-cols-2 md:grid-cols-4">
             {[
-              `${site.carrierCount} carrier markets`,
-              "Every asset class",
+              "20+ carrier markets",
+              "Rental property specialists",
               "12 western states",
               "Independent agency",
             ].map((b) => (
@@ -188,6 +189,79 @@ export default function HomePage() {
       </section>
 
       <TrustBar />
+
+      {/* Problem section */}
+      <section className="bg-surface">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Most agents treat investor property like homeowner insurance.
+            <br />
+            <span className="text-flame">Your property is a business asset.</span>
+          </h2>
+          <div className="mt-6 max-w-3xl space-y-4 text-lg text-muted">
+            <p>
+              Vacancy clauses, loss of rents, ordinance and law, habitational
+              liability. These are not optional. They are the difference
+              between a claim that gets paid and one that does not.
+            </p>
+            <p>
+              We specialize in investor insurance. We know which carriers
+              write your asset class, what coverage you actually need, and how
+              to structure a policy that works when something goes wrong.
+            </p>
+            <p>
+              The right policy means your tenant claim gets handled, your rental income is protected during repairs, and you&apos;re not explaining your investment property to an agent who has never placed one.
+            </p>
+            <p className="font-semibold text-foreground">
+              That&apos;s the whole job.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works - 3-step plan */}
+      <section className="bg-white">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            How It Works
+          </h2>
+          <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
+            Getting the right coverage should not be complicated.
+          </p>
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                n: "1",
+                title: "Tell us about your property",
+                body: "Answer a few questions about what you own, how it's held, and what you need. Takes about 5 minutes.",
+              },
+              {
+                n: "2",
+                title: "We route it to the right carrier",
+                body: "We match your property to the carrier with the right appetite, the right form, and the right price for your situation.",
+              },
+              {
+                n: "3",
+                title: "Coverage in place before your deadline",
+                body: "We move fast for clean accounts. If you have a closing date or a renewal coming up, tell us and we'll prioritize it.",
+              },
+            ].map((s) => (
+              <div key={s.n} className="flex flex-col">
+                <div className="grid h-12 w-12 place-items-center rounded-full bg-flame text-xl font-black text-white">
+                  {s.n}
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-foreground">{s.title}</h3>
+                <p className="mt-2 text-base text-muted">{s.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link href="/get-a-quote" className="text-base font-semibold text-flame hover:underline">
+              Ready to start? →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Asset class cards */}
       <section className="container-narrow py-16">
@@ -218,32 +292,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Problem section */}
-      <section className="bg-surface">
-        <div className="container-narrow py-16">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Most agents treat investor property like homeowner insurance.
-            <br />
-            <span className="text-flame">Your property is a business asset.</span>
-          </h2>
-          <div className="mt-6 max-w-3xl space-y-4 text-lg text-muted">
-            <p>
-              Vacancy clauses, loss of rents, ordinance and law, habitational
-              liability. These are not optional. They are the difference
-              between a claim that gets paid and one that does not.
-            </p>
-            <p>
-              We specialize in investor insurance. We know which carriers
-              write your asset class, what coverage you actually need, and how
-              to structure a policy that works when something goes wrong.
-            </p>
-            <p className="font-semibold text-foreground">
-              That's the whole job.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Guide section */}
       <section className="container-narrow py-16">
         <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
@@ -259,50 +307,6 @@ export default function HomePage() {
           <p className="font-semibold text-foreground">
             We work for you. Not the insurance company.
           </p>
-        </div>
-      </section>
-
-      {/* 3-step plan */}
-      <section className="bg-flame text-white">
-        <div className="container-narrow py-16">
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Get covered in 3 steps.
-          </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                n: "1",
-                title: "Tell us about your property.",
-                body: "Asset class, location, how it's used. Takes 60 seconds.",
-              },
-              {
-                n: "2",
-                title: "We shop 10+ carrier markets.",
-                body: "We find the right policy for your specific asset, not a generic landlord form.",
-              },
-              {
-                n: "3",
-                title: "You get covered.",
-                body: "We handle the paperwork. You get back to investing.",
-              },
-            ].map((s) => (
-              <div key={s.n} className="rounded-lg border border-white/15 bg-white/5 p-6">
-                <div className="grid h-12 w-12 place-items-center rounded-full bg-gold text-xl font-black text-foreground">
-                  {s.n}
-                </div>
-                <h3 className="mt-4 text-xl font-bold text-white">{s.title}</h3>
-                <p className="mt-2 text-base text-white/85">{s.body}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/get-a-quote"
-              className="inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-lg font-semibold text-foreground shadow-sm transition hover:bg-white"
-            >
-              Start My Quote
-            </Link>
-          </div>
         </div>
       </section>
 

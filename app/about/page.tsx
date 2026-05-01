@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata = {
   title: "About, Real Estate Investor Insurance Specialists",
   description:
-    "Vantage Point Risk Partners is an independent insurance agency specializing in real estate investor coverage across the western US. 10+ carriers, every asset class.",
+    "Vantage Point Risk Partners is an independent insurance agency specializing in real estate investor coverage across the western US. 20+ carriers, every asset class.",
 };
 
 export default function AboutPage() {
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 Independent agent specializing in real estate investor
                 insurance: rentals, rehabs, short-term rentals, multifamily,
                 commercial property, and the specialty asset classes most
-                generalist agents will not touch. Works with 10+ carrier
+                generalist agents will not touch. Works with 20+ carrier
                 markets that actively write investor business: BHHC,
                 Hartford, Openly, Liberty Mutual, Safeco, Travelers, Obie,
                 Steadily, REInsurePro, plus E&S markets.
@@ -105,7 +105,7 @@ export default function AboutPage() {
           Our Carrier Markets
         </h2>
         <p className="mt-3 text-base text-muted sm:text-lg">
-          We work across 10+ carriers that actively write real estate
+          We work across 20+ carriers that actively write real estate
           investor business. The right carrier for you depends on the asset
           class, the property condition, the state, and the size of your
           portfolio.

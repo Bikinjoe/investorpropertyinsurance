@@ -41,6 +41,30 @@ const insuranceBasics = [
       "Most single-family landlord policies run $800 to $2,500 per year. Here's what moves the price.",
     href: "/landlord-insurance-cost",
   },
+  {
+    title: "Landlord Insurance vs Homeowners Insurance",
+    description:
+      "Homeowners insurance and landlord insurance are not the same. Here's what each covers and why the difference matters.",
+    href: "/landlord-insurance-vs-homeowners-insurance",
+  },
+  {
+    title: "5 Costly Insurance Mistakes Landlords Make",
+    description:
+      "These 5 mistakes cost landlords thousands. Here's what to watch for before your next renewal.",
+    href: "/5-landlord-insurance-mistakes",
+  },
+  {
+    title: "Insurance for a Vacant Rental Property",
+    description:
+      "Most landlord policies limit or exclude coverage after 30-60 days of vacancy. Here's what to do.",
+    href: "/vacant-rental-property-insurance",
+  },
+  {
+    title: "Insuring a Rental Property Held in an LLC",
+    description:
+      "LLC ownership changes how insurance works. The LLC must be listed as the named insured, not you personally.",
+    href: "/llc-rental-property-insurance",
+  },
 ];
 
 const propertyTypes = [
@@ -192,6 +216,12 @@ const tools = [
     description:
       "A guided tool to estimate appropriate dwelling, liability, and rental income coverage for your property.",
     href: "/how-much-coverage-do-i-need",
+  },
+  {
+    title: "Is This a Good Deal? Deal Analyzer",
+    description:
+      "Enter your numbers and get a green, yellow, or red signal on whether this rental property works financially.",
+    href: "/deal-analyzer",
   },
 ];
 

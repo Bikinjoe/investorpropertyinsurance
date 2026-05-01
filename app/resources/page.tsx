@@ -100,6 +100,63 @@ const propertyTypes = [
   },
 ];
 
+const investorGuides = [
+  {
+    title: "First-Time Landlord: What You Need to Know Before You Rent",
+    description:
+      "The shift from homeowner to landlord, the five things to do before move-in, and the one mistake that costs new landlords the most.",
+    href: "/first-time-landlord-tips",
+  },
+  {
+    title: "How to Screen Tenants: What Landlords Need to Check",
+    description:
+      "Credit, income, rental history, criminal background, and references. What to check and how to apply fair housing rules.",
+    href: "/how-to-screen-tenants",
+  },
+  {
+    title: "What to Do If Your Tenant Doesn't Pay Rent",
+    description:
+      "The step-by-step process from first contact to eviction, and what insurance does and does not cover.",
+    href: "/what-to-do-if-tenant-doesnt-pay-rent",
+  },
+  {
+    title: "Should I Hire a Property Manager?",
+    description:
+      "Property managers cost 8 to 12 percent of rent. Here's how to know if it's worth it and what to check on your insurance policy.",
+    href: "/should-i-hire-property-manager",
+  },
+  {
+    title: "Rental Property Tax Deductions: What Landlords Can Write Off",
+    description:
+      "Mortgage interest, depreciation, insurance, repairs, management fees, and more. What qualifies and what does not.",
+    href: "/rental-property-tax-deductions",
+  },
+  {
+    title: "How to Calculate Cash Flow on a Rental Property",
+    description:
+      "The correct formula including mortgage, insurance, management, maintenance reserve, and vacancy. Not just rent minus mortgage.",
+    href: "/how-to-calculate-cash-flow-rental-property",
+  },
+  {
+    title: "How to Grow a Rental Property Portfolio",
+    description:
+      "Financing strategy, the insurance shift at three-plus properties, LLC structure, and what changes as you scale.",
+    href: "/how-to-grow-rental-portfolio",
+  },
+  {
+    title: "What Expenses Should You Expect as a Landlord?",
+    description:
+      "Fixed, variable, and one-time costs. The full expense picture before you buy, including the 50 percent rule.",
+    href: "/what-expenses-to-expect-as-landlord",
+  },
+  {
+    title: "When Should You Sell Your Rental Property?",
+    description:
+      "Signs it is time to sell, signs to keep holding, tax considerations, and what happens to your landlord policy at closing.",
+    href: "/when-to-sell-rental-property",
+  },
+];
+
 const tools = [
   {
     title: "Rental Property Profit Calculator",
@@ -204,6 +261,26 @@ export default function ResourcesPage() {
               description="We work with 20+ carriers for real estate investors and property owners across the Western US."
               href="/carrier-markets"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3b: Real Estate Investor Guides */}
+      <section className="bg-white py-14">
+        <div className="container-wide">
+          <h2 className="mb-8 border-l-4 border-brand pl-4 text-2xl font-bold text-foreground">
+            Real Estate Investor Guides
+          </h2>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {investorGuides.map((card) => (
+              <ResourceCard
+                key={card.href}
+                category="Investor Guides"
+                title={card.title}
+                description={card.description}
+                href={card.href}
+              />
+            ))}
           </div>
         </div>
       </section>

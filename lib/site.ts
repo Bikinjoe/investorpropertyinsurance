@@ -36,30 +36,29 @@ export const site = {
     { name: "Hugo", title: "Producer" },
   ],
   nav: [
+    { label: "Home", href: "/" },
+    { label: "Who We Help", href: "/who-we-help" },
     {
-      label: "Property Types",
+      label: "Insurance Solutions",
+      href: "/insurance-solutions",
       children: [
-        { label: "Rentals & Rehabs", href: "/rentals-rehabs" },
-        { label: "Short-Term Rentals", href: "/short-term-rentals" },
-        { label: "House Hacking", href: "/house-hacking-insurance" },
-        { label: "Ground-Up Construction", href: "/ground-up-construction" },
-        { label: "Multifamily", href: "/multifamily" },
-        { label: "Mobile Home Park", href: "/mobile-home-park-insurance" },
+        { label: "Rental Property Insurance", href: "/rental-property-insurance" },
+        { label: "Portfolio & Multiple Properties", href: "/multiple-rental-property-insurance" },
         { label: "Commercial Property", href: "/commercial-property" },
-        { label: "Self-Storage Facility", href: "/self-storage-insurance" },
-        { label: "Portfolio Landlord", href: "/portfolio-landlord-insurance" },
-        { label: "DSCR Loan Coverage", href: "/dscr-loan-insurance" },
+        { label: "Short-Term Rentals", href: "/short-term-rentals" },
+        { label: "Builders Risk & Renovation", href: "/rentals-rehabs" },
       ],
     },
-    { label: "Cost", href: "/how-much-does-real-estate-investor-insurance-cost" },
-    { label: "Resources", href: "/resources" },
+    { label: "Resource Center", href: "/resources" },
+    { label: "Calculators & Tools", href: "/calculators" },
+    { label: "Referral Partners", href: "/referral-partners" },
     { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "Start Here", href: "/start-here", cta: true },
   ] as NavItem[],
 };
 
-export type NavLeaf = { label: string; href: string };
-export type NavGroup = { label: string; children: NavLeaf[] };
+export type NavLeaf = { label: string; href: string; cta?: boolean };
+export type NavGroup = { label: string; href?: string; children: NavLeaf[] };
 export type NavItem = NavLeaf | NavGroup;
 
 export function isNavGroup(item: NavItem): item is NavGroup {

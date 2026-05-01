@@ -25,6 +25,10 @@ export default function Header() {
     };
   }, []);
 
+  // Separate CTA items from regular nav items
+  const ctaItems = site.nav.filter((item) => !isNavGroup(item) && (item as { cta?: boolean }).cta);
+  const navItems = site.nav.filter((item) => isNavGroup(item) || !(item as { cta?: boolean }).cta);
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="container-narrow flex h-16 items-center justify-between gap-4">
@@ -38,7 +42,7 @@ export default function Header() {
         </Link>
 
         <nav ref={dropdownRef} className="hidden items-center gap-1 lg:flex">
-          {site.nav.map((item) =>
+          {navItems.map((item) =>
             isNavGroup(item) ? (
               <div key={item.label} className="relative">
                 <button
@@ -73,7 +77,7 @@ export default function Header() {
                 )}
               </div>
             ) : (
-              <Link key={item.href} href={item.href} className="btn-ghost">
+              <Link key={(item as { href: string }).href} href={(item as { href: string }).href} className="btn-ghost">
                 {item.label}
               </Link>
             )
@@ -88,9 +92,15 @@ export default function Header() {
           >
             {site.phoneCTA}
           </a>
-          <Link href="/get-a-quote" className="btn-primary">
-            Get a Quote
-          </Link>
+          {ctaItems.map((item) => (
+            <Link
+              key={(item as { href: string }).href}
+              href={(item as { href: string }).href}
+              className="inline-flex items-center justify-center rounded-md bg-gold px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-flame focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         <button
@@ -106,7 +116,7 @@ export default function Header() {
       {open && (
         <div className="border-t border-border bg-white lg:hidden">
           <div className="container-narrow flex flex-col gap-1 py-3">
-            {site.nav.map((item) =>
+            {navItems.map((item) =>
               isNavGroup(item) ? (
                 <div key={item.label} className="mt-2">
                   <p className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-muted">
@@ -116,7 +126,7 @@ export default function Header() {
                     <Link
                       key={c.href}
                       href={c.href}
-                      className="rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-surface"
+                      className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-surface"
                       onClick={() => setOpen(false)}
                     >
                       {c.label}
@@ -125,8 +135,8 @@ export default function Header() {
                 </div>
               ) : (
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  key={(item as { href: string }).href}
+                  href={(item as { href: string }).href}
                   className="rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-surface"
                   onClick={() => setOpen(false)}
                 >
@@ -140,13 +150,16 @@ export default function Header() {
             >
               {site.phoneCTA}
             </a>
-            <Link
-              href="/get-a-quote"
-              className="btn-primary mt-2"
-              onClick={() => setOpen(false)}
-            >
-              Get a Quote
-            </Link>
+            {ctaItems.map((item) => (
+              <Link
+                key={(item as { href: string }).href}
+                href={(item as { href: string }).href}
+                className="mt-2 inline-flex items-center justify-center rounded-md bg-gold px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-flame"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}

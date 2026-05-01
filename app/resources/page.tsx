@@ -105,18 +105,18 @@ const tools = [
     title: "Rental Property Profit Calculator",
     description:
       "Calculate monthly cash flow, annual profit, and ROI before you buy.",
-    comingSoon: true,
+    href: "/rental-profit-calculator",
   },
   {
     title: "Insurance Cost Estimator",
     description:
       "Get a rough idea of what landlord insurance might cost before you talk to an agent.",
-    comingSoon: true,
+    href: "/insurance-cost-estimator",
   },
   {
     title: "Vacancy Impact Calculator",
     description: "See how vacancy months affect your annual income.",
-    comingSoon: true,
+    href: "/vacancy-calculator",
   },
 ];
 
@@ -216,21 +216,14 @@ export default function ResourcesPage() {
           </h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {tools.map((card) => (
-              <div
-                key={card.title}
-                className="relative rounded-lg border border-border bg-white p-6 shadow-sm"
-              >
-                <div className="mb-3 flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Tools
-                  </span>
-                  <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500">
-                    Coming Soon
-                  </span>
-                </div>
-                <h3 className="mb-2 text-base font-bold text-foreground">{card.title}</h3>
-                <p className="text-sm text-muted-foreground">{card.description}</p>
-              </div>
+              <ResourceCard
+                key={card.href}
+                category="Tools"
+                title={card.title}
+                description={card.description}
+                href={card.href}
+                linkLabel="Try the Calculator →"
+              />
             ))}
           </div>
         </div>
@@ -263,11 +256,13 @@ function ResourceCard({
   title,
   description,
   href,
+  linkLabel = "Learn More →",
 }: {
   category: string;
   title: string;
   description: string;
   href: string;
+  linkLabel?: string;
 }) {
   return (
     <div className="flex flex-col rounded-lg border border-border bg-white p-6 shadow-sm">
@@ -280,7 +275,7 @@ function ResourceCard({
         href={href}
         className="text-sm font-semibold text-brand hover:underline"
       >
-        Learn More &rarr;
+        {linkLabel}
       </Link>
     </div>
   );

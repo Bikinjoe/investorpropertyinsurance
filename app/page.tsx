@@ -4,128 +4,37 @@ import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
 import CarrierStrip from "@/components/CarrierStrip";
 import JsonLd from "@/components/JsonLd";
-import { site } from "@/lib/site";
 
 export const metadata = {
-  title: "Real Estate Investor Insurance, Built for Investors",
+  title: "Investor Property Insurance for Real Estate Investors | Western U.S.",
   description:
-    "Insurance for real estate investors and income-producing property owners across the Western US. Access to 20+ carrier markets.",
+    "Insurance for real estate investors, rental property owners, rehab investors, short-term rental operators, and select income-producing property owners across the Western U.S. Start with a fit-based property review.",
 };
 
 const homeFAQs = [
   {
-    q: "Why do I need investor insurance instead of a homeowner policy?",
-    a: (
-      <p>
-        Homeowner policies assume you live in the property. The moment you
-        rent it out, the policy can deny claims for material misrepresentation.
-        An investor form (DP-3 for 1-4 units, commercial package for 5+) is
-        built for the way you actually use the property.{" "}
-        <Link href="/landlord-insurance-vs-investor-insurance">
-          See the full comparison.
-        </Link>
-      </p>
-    ),
+    q: "Is landlord insurance the same as homeowners insurance?",
+    a: "No. A rental property is not insured the same way as a home you live in. Ownership, occupancy, rental use, and carrier rules all matter.",
   },
   {
-    q: "Do you write short-term rentals (Airbnb / VRBO)?",
-    a: (
-      <p>
-        Yes. Standard landlord and homeowner policies usually exclude STR
-        activity. We work with carriers that write purpose-built short-term
-        rental policies covering host liability, amenities, business
-        income, and bedbug claims.{" "}
-        <Link href="/short-term-rentals">More on STR coverage.</Link>
-      </p>
-    ),
+    q: "Can you insure properties owned by an LLC?",
+    a: "Often, yes, but the correct path depends on the carrier, property type, state, occupancy, and ownership structure.",
   },
   {
-    q: "Can you cover my whole portfolio on one policy?",
-    a: (
-      <p>
-        Yes. We write portfolio policies through carriers that specialize in
-        investor business. One renewal date. One carrier. Properties added
-        and removed as you buy and sell. Most active investors with 5+ doors
-        end up here.{" "}
-        <Link href="/faq">Read more in the FAQ.</Link>
-      </p>
-    ),
+    q: "Do you insure short-term rentals?",
+    a: "We review short-term rentals where carrier appetite fits. STR coverage is more specialized than standard landlord insurance.",
   },
   {
-    q: "How much does investor property insurance cost?",
-    a: (
-      <p>
-        Single family rental: $800 to $1,800 per year. STR: $1,200 to $3,000.
-        Small apartment building: $3,000 to $8,000. Commercial: $2,500 to
-        $10,000+. Your number depends on location, construction type, claims
-        history, and a few other factors.{" "}
-        <Link href="/how-much-does-real-estate-investor-insurance-cost">
-          See the full cost breakdown.
-        </Link>
-      </p>
-    ),
+    q: "Do you insure rehabs or renovation projects?",
+    a: "Yes, when the project fits available carrier appetite. Renovation, vacancy, and construction activity can materially change the insurance path.",
   },
   {
-    q: "What states do you write in?",
-    a: (
-      <p>
-        AZ, CA, CO, ID, MT, NM, NV, OR, TX, UT, WA, and WY. The 12 western
-        states. We have carriers in every market we serve.
-      </p>
-    ),
-  },
-];
-
-const assetCards = [
-  {
-    href: "/rentals-rehabs",
-    title: "Rentals & Rehabs",
-    desc: "1-4 unit residential, vacant, and properties under renovation.",
+    q: "Do you shop every carrier every time?",
+    a: "No. We focus on the carrier path that fits the property, ownership, use, and underwriting facts. Remarketing or broad shopping is not always the right answer.",
   },
   {
-    href: "/short-term-rentals",
-    title: "Short-Term Rentals",
-    desc: "Airbnb, VRBO, and vacation properties with host liability.",
-  },
-  {
-    href: "/house-hacking-insurance",
-    title: "House Hacking",
-    desc: "Owner-occupied rentals: duplex, triplex, ADU, rented rooms.",
-  },
-  {
-    href: "/ground-up-construction",
-    title: "Ground-Up Construction",
-    desc: "Builders risk for new builds and major renovations.",
-  },
-  {
-    href: "/multifamily",
-    title: "5+ Unit Multifamily",
-    desc: "Apartments, student housing, and hotels.",
-  },
-  {
-    href: "/mobile-home-park-insurance",
-    title: "Mobile Home Park",
-    desc: "Specialty asset class. We work with the carriers that say yes.",
-  },
-  {
-    href: "/commercial-property",
-    title: "Commercial Property",
-    desc: "Office, retail, warehouse, industrial, and mixed-use.",
-  },
-  {
-    href: "/self-storage-insurance",
-    title: "Self-Storage Facility",
-    desc: "Tenant property liability, garage keeper's, business income.",
-  },
-  {
-    href: "/portfolio-landlord-insurance",
-    title: "Portfolio Landlord",
-    desc: "5+ properties on one policy with one renewal date.",
-  },
-  {
-    href: "/dscr-loan-insurance",
-    title: "DSCR Loan Coverage",
-    desc: "Lender-compliant policies for investment-property loans.",
+    q: "What if we are not a fit?",
+    a: "We will tell you early. We would rather give you a clear answer than drag you through a weak quote process.",
   },
 ];
 
@@ -139,46 +48,42 @@ export default function HomePage() {
           mainEntity: homeFAQs.map((f) => ({
             "@type": "Question",
             name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: typeof f.a === "string" ? f.a : "" },
+            acceptedAnswer: { "@type": "Answer", text: f.a },
           })),
         }}
       />
 
-      {/* Hero */}
+      {/* Section 1: Hero */}
       <section className="relative border-b border-border bg-gradient-to-br from-white via-surface to-surface-2">
         <div className="container-narrow py-16 sm:py-24">
           <p className="text-sm font-semibold uppercase tracking-wider text-gold">
-            Western US Rental Property Specialists
+            Western U.S. Property Focus
           </p>
           <h1 className="mt-3 text-4xl font-extrabold leading-tight text-foreground sm:text-5xl md:text-6xl">
-            Your Homeowners Policy Won&apos;t Cover a Tenant Claim.
-            <br />
-            <span className="text-flame">We write insurance built for rental property investors.</span>
+            Real Estate Investor Insurance Built for the Way Your Property Is Actually Used
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted sm:text-xl">
-            If you own rental property, the coverage type matters. Homeowners policies are built for owner-occupants. The moment you have a tenant, the risk profile changes and so do the exclusions. We work exclusively with real estate investors and income-producing property owners across the Western US.
-          </p>
-          <p className="mt-3 max-w-2xl text-base text-muted">
-            We know the difference between a DP-3 and a homeowners policy. More importantly, we know which one your situation actually needs.
+            Rental properties, rehabs, short-term rentals, small multifamily, and select income-producing property across the Western U.S. We help investors avoid the wrong policy, confirm the right coverage path, and move quickly when the account fits.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/get-a-quote" className="btn-primary w-full text-lg sm:w-auto">
-              Get a Quote
+              Start My Property Review
             </Link>
-            <Link href="/insurance-fit-check" className="btn-secondary w-full text-lg sm:w-auto">
-              Check if you&apos;re covered correctly →
+            <Link href="/who-we-help" className="btn-secondary w-full text-lg sm:w-auto">
+              See If We&apos;re a Fit
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-3 text-sm text-foreground sm:grid-cols-2 md:grid-cols-4">
+          <div className="mt-10 grid gap-3 text-sm text-foreground sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {[
-              "20+ carrier markets",
-              "Rental property specialists",
-              "12 western states",
-              "Independent agency",
+              "Western U.S. property focus",
+              "Rental, rehab, STR, and small multifamily paths",
+              "Independent carrier access",
+              "Fit-based coverage review",
+              "Fast movement for good-fit accounts",
             ].map((b) => (
-              <div key={b} className="flex items-center gap-2">
-                <span className="grid h-5 w-5 place-items-center rounded-full bg-flame text-xs font-bold text-white">
+              <div key={b} className="flex items-start gap-2">
+                <span className="mt-0.5 grid h-5 w-5 flex-shrink-0 place-items-center rounded-full bg-flame text-xs font-bold text-white">
                   ✓
                 </span>
                 {b}
@@ -190,60 +95,84 @@ export default function HomePage() {
 
       <TrustBar />
 
-      {/* Problem section */}
+      {/* Section 2: Problem */}
       <section className="bg-surface">
         <div className="container-narrow py-16">
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Most agents treat investor property like homeowner insurance.
-            <br />
-            <span className="text-flame">Your property is a business asset.</span>
+            Your Investment Property Is Not Your Personal Home
           </h2>
           <div className="mt-6 max-w-3xl space-y-4 text-lg text-muted">
             <p>
-              Vacancy clauses, loss of rents, ordinance and law, habitational
-              liability. These are not optional. They are the difference
-              between a claim that gets paid and one that does not.
+              A rental, rehab, short-term rental, or entity-owned property has different insurance issues than a home you live in.
             </p>
             <p>
-              We specialize in investor insurance. We know which carriers
-              write your asset class, what coverage you actually need, and how
-              to structure a policy that works when something goes wrong.
+              The wrong policy can create problems with vacancy, renovation, rental use, lender requirements, LLC ownership, loss of rents, tenant injury claims, ordinance or law, short-term rental use, and claim disputes after a loss.
             </p>
             <p>
-              The right policy means your tenant claim gets handled, your rental income is protected during repairs, and you&apos;re not explaining your investment property to an agent who has never placed one.
-            </p>
-            <p className="font-semibold text-foreground">
-              That&apos;s the whole job.
+              A cheap quote is not helpful if it is built on the wrong coverage path.
             </p>
           </div>
         </div>
       </section>
 
-      {/* How It Works - 3-step plan */}
+      {/* Section 3: Guide */}
       <section className="bg-white">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            We Help Investors Find the Right Coverage Path
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg text-muted">
+            Most investors are trying to move fast. Closings, lender deadlines, renovations, tenants, and refinance timelines do not wait. But speed only helps if the coverage is placed correctly. We help property owners and real estate investors understand which carrier, form, limits, and coverage path actually match the property.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Good-Fit Accounts Move Fast",
+                body: "When the property, ownership, occupancy, use, and carrier path are clear, we move quickly.",
+              },
+              {
+                title: "Complex Accounts Get Judgment",
+                body: "When the risk is more complex, we slow down enough to review the details correctly.",
+              },
+              {
+                title: "Wrong-Fit Accounts Get a Clear Answer Early",
+                body: "If we are not the right fit, we will tell you early rather than drag you through a weak quote process.",
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="rounded-lg border border-border bg-surface-2 p-6"
+              >
+                <h3 className="text-xl font-bold text-foreground">{card.title}</h3>
+                <p className="mt-2 text-base text-muted">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: How It Works */}
+      <section className="bg-surface">
         <div className="container-narrow py-16">
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             How It Works
           </h2>
-          <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
-            Getting the right coverage should not be complicated.
-          </p>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {[
               {
                 n: "1",
-                title: "Tell us about your property",
-                body: "Answer a few questions about what you own, how it's held, and what you need. Takes about 5 minutes.",
+                title: "Tell Us What You Own",
+                body: "We look at the property type, state, ownership, occupancy, lender needs, renovation plans, claims history, and timing.",
               },
               {
                 n: "2",
-                title: "We route it to the right carrier",
-                body: "We match your property to the carrier with the right appetite, the right form, and the right price for your situation.",
+                title: "We Confirm the Coverage Path",
+                body: "We check fit, carrier appetite, form type, and red flags before wasting your time with a weak quote process.",
               },
               {
                 n: "3",
-                title: "Coverage in place before your deadline",
-                body: "We move fast for clean accounts. If you have a closing date or a renewal coming up, tell us and we'll prioritize it.",
+                title: "Move Forward With Clarity",
+                body: "If the path is clear, we quote and bind quickly. If the account needs review, we explain what is missing. If we are not the right fit, we tell you early.",
               },
             ].map((s) => (
               <div key={s.n} className="flex flex-col">
@@ -255,89 +184,307 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="mt-10">
-            <Link href="/get-a-quote" className="text-base font-semibold text-flame hover:underline">
-              Ready to start? →
+          <div className="mt-10 text-center">
+            <Link href="/get-a-quote" className="btn-primary">
+              Start My Property Review
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Asset class cards */}
-      <section className="container-narrow py-16">
-        <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-          Coverage for every asset class.
-        </h2>
-        <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
-          Investor property is not a single product. The right form, the right
-          carrier, and the right limits depend on what you actually own. Pick
-          your asset class to see how we structure coverage for it.
-        </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {assetCards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className="group rounded-lg border border-border bg-surface-2 p-6 transition hover:border-flame hover:shadow-md"
-            >
-              <h3 className="text-xl font-bold text-foreground group-hover:text-flame">
-                {card.title}
-              </h3>
-              <p className="mt-2 text-base text-muted">{card.desc}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-flame">
-                Learn more →
-              </span>
+      {/* Section 5: Property Types */}
+      <section className="bg-white">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Investor Property Types We Commonly Review
+          </h2>
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Strong-Fit Property Types</h3>
+              <ul className="mt-4 space-y-2 text-base text-muted">
+                {[
+                  "Long-term rental properties",
+                  "Landlord policies",
+                  "DSCR buyer properties",
+                  "Small rental portfolios",
+                  "Rehabs and renovations where the carrier path is clear",
+                  "Short-term rentals where appetite fits",
+                  "Small multifamily",
+                  "Select commercial property owners",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 text-flame font-bold">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">May Require Additional Review</h3>
+              <ul className="mt-4 space-y-2 text-base text-muted">
+                {[
+                  "Larger multifamily",
+                  "Mixed-use property",
+                  "Vacant property",
+                  "Heavy renovation projects",
+                  "Mobile home parks",
+                  "Self-storage",
+                  "Properties with prior claims, condition issues, or unusual occupancy",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 text-flame font-bold">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Not Usually Ideal</h3>
+              <ul className="mt-4 space-y-2 text-base text-muted">
+                {[
+                  "Price-only shoppers",
+                  "Same-day emergencies with incomplete information",
+                  "Properties with unclear ownership or occupancy",
+                  "Risks outside validated carrier appetite",
+                  "Clients unwilling to complete structured intake",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 text-flame font-bold">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Not for Everyone */}
+      <section className="bg-surface">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            We Are Not Trying to Quote Every Property
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg text-muted">
+            That is the point. We are a fit-based agency for investors and property owners who want coverage placed correctly. We are not built for every risk or every last-minute quote emergency. We would rather tell you early that we are not the right fit than place coverage that does not match the property.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 7: Coverage Paths */}
+      <section className="bg-white">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Common Coverage Paths for Real Estate Investors
+          </h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                href: "/rental-property-insurance",
+                title: "Landlord Insurance",
+                body: "For rental properties that are not owner-occupied and need coverage aligned with tenant occupancy and rental use.",
+              },
+              {
+                href: "/rentals-rehabs",
+                title: "Rehab and Renovation Insurance",
+                body: "For investors improving, renovating, or repositioning property before rental, resale, or occupancy.",
+              },
+              {
+                href: "/short-term-rentals",
+                title: "Short-Term Rental Insurance",
+                body: "For properties rented through Airbnb, Vrbo, or similar platforms, where carrier appetite and coverage form matter.",
+              },
+              {
+                href: "/multifamily",
+                title: "Small Multifamily Insurance",
+                body: "For duplexes, triplexes, fourplexes, and select larger multifamily risks where the carrier path fits.",
+              },
+              {
+                href: "/commercial-property",
+                title: "Commercial Property and Lessor's Risk",
+                body: "For select income-producing property owners with tenant, building, liability, and lender requirements.",
+              },
+              {
+                href: "/umbrella-insurance-landlords",
+                title: "Umbrella and Liability Protection",
+                body: "For investors who need to review whether liability limits match their asset and exposure picture.",
+              },
+            ].map((card) => (
+              <div
+                key={card.href}
+                className="group rounded-lg border border-border bg-surface-2 p-6 transition hover:border-flame hover:shadow-md"
+              >
+                <h3 className="text-xl font-bold text-foreground group-hover:text-flame">
+                  {card.title}
+                </h3>
+                <p className="mt-2 text-base text-muted">{card.body}</p>
+                <Link
+                  href={card.href}
+                  className="mt-3 inline-block text-sm font-semibold text-flame hover:underline"
+                >
+                  Learn more &rarr;
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8: What Can Go Wrong */}
+      <section className="bg-surface">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            What Can Go Wrong With the Wrong Policy?
+          </h2>
+          <p className="mt-4 text-lg text-muted">
+            The wrong policy may look fine until something changes or a claim happens.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "The Property Is Rented but Written Like a Home",
+                body: "A homeowner policy may not fit a property used as a rental.",
+              },
+              {
+                title: "The Property Is Vacant or Under Renovation",
+                body: "Vacancy and renovation can change what the carrier will or will not cover.",
+              },
+              {
+                title: "The Property Is Owned by an LLC or Entity",
+                body: "Ownership structure can affect the correct named insured and coverage path.",
+              },
+              {
+                title: "The Lender Requires Evidence That Does Not Match the Policy",
+                body: "A lender request can expose whether the coverage was placed correctly.",
+              },
+              {
+                title: "A Claim Reveals the Policy Was Built on the Wrong Assumptions",
+                body: "The worst time to discover a mismatch is after a loss.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-lg border border-border bg-white p-6"
+              >
+                <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                <p className="mt-2 text-base text-muted">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 9: What Information We Need */}
+      <section className="bg-white">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            What Information Do We Need to Review Your Property?
+          </h2>
+          <p className="mt-4 text-lg text-muted">
+            To move quickly, we need the right details upfront.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Basic Property Details",
+                body: "Address, property type, year built, condition, square footage, occupancy, and current use.",
+              },
+              {
+                title: "Ownership and Entity Information",
+                body: "Personal ownership, LLC ownership, trust ownership, or other entity structure.",
+              },
+              {
+                title: "Rental or Occupancy Details",
+                body: "Long-term rental, short-term rental, vacant, owner-occupied, tenant-occupied, or under renovation.",
+              },
+              {
+                title: "Lender or Closing Requirements",
+                body: "Mortgagee clause, loan number, evidence requirements, closing deadlines, or refinance requirements.",
+              },
+              {
+                title: "Prior Coverage and Claims",
+                body: "Current policy, renewal dates, loss history, cancellations, or underwriting issues.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-lg border border-border bg-surface-2 p-6"
+              >
+                <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                <p className="mt-2 text-base text-muted">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 10: Success / Outcome */}
+      <section className="bg-surface">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Walk Away Knowing the Coverage Path Makes Sense
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg text-muted">
+            When the account fits, you get a clear recommendation, a clean quote process, and coverage built around how the property is actually owned, occupied, financed, and used.
+          </p>
+          <ul className="mt-6 space-y-2 text-lg text-muted">
+            {[
+              "No guessing.",
+              "No homeowner-policy mismatch.",
+              "No vague quote chase.",
+              "No pretending every property is the same.",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="mt-1 grid h-5 w-5 flex-shrink-0 place-items-center rounded-full bg-flame text-xs font-bold text-white">
+                  ✓
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Section 11: Final CTA */}
+      <section className="bg-white">
+        <div className="container-narrow py-16 text-center">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Ready to Review Your Property?
+          </h2>
+          <p className="mt-4 mx-auto max-w-2xl text-lg text-muted">
+            Start with a short property review. We will confirm whether we are likely a fit, what information is needed, and what coverage path makes sense.
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Link href="/get-a-quote" className="btn-primary w-full sm:w-auto">
+              Start My Property Review
             </Link>
-          ))}
+            <Link href="/quote-ready-checklist" className="btn-secondary w-full sm:w-auto">
+              See What Information We Need
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Guide section */}
-      <section className="container-narrow py-16">
-        <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-          We know investor insurance.
-        </h2>
-        <div className="mt-6 max-w-3xl space-y-4 text-lg text-muted">
-          <p>
-            Vantage Point Risk Partners is an independent insurance agency
-            specializing in real estate investor coverage. {site.carrierCount}{" "}
-            carrier markets. Every asset class.
-          </p>
-          <p>{site.serviceArea}.</p>
-          <p className="font-semibold text-foreground">
-            We work for you. Not the insurance company.
-          </p>
+      {/* Section 12: FAQ */}
+      <section className="bg-surface">
+        <div className="container-narrow py-16">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8">
+            <FAQAccordion items={homeFAQs} />
+          </div>
         </div>
       </section>
 
-      {/* Carrier strip */}
+      {/* Section 13: Carrier Strip */}
       <section className="container-narrow py-16">
         <CarrierStrip />
       </section>
 
-      {/* FAQ Preview */}
-      <section className="bg-surface">
-        <div className="container-narrow py-16">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Common questions.
-          </h2>
-          <p className="mt-2 text-lg text-muted">
-            Quick answers to what investors ask us most.
-          </p>
-          <div className="mt-8">
-            <FAQAccordion items={homeFAQs} />
-          </div>
-          <div className="mt-6 text-center">
-            <Link href="/faq" className="btn-secondary">
-              See all 25 questions
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <CTASection
-        heading="Every property type. Every investor stage."
-        sub="Get a quote in 60 seconds. We'll have options back to you fast."
+        heading="Ready to Review Your Property?"
+        sub="Start with a fit-based property review. We confirm the coverage path before wasting your time."
       />
     </>
   );
